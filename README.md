@@ -1,6 +1,6 @@
 # The Keyboard Keyboard
 
-A mechanical keyboard, with a pinao-esque layout, or a MIDI keyboard with MX style switches and (hopefully) QMK firmware?
+A mechanical keyboard with a piano-esque layout, or a MIDI keyboard with MX style switches and (hopefully) QMK firmware?
 This is a keyboard design for the very tiny segment of people who think the "computer keyboard as MIDI input" in Ableton is neat, and want more of the same.
 
 PCB design is currently ready for prototyping and hopefully writing firmware, and a basic 3D printed case design will also be added to this repository at some point.

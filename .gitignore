@@ -1,0 +1,10 @@
+fp-info-cache
+fp-info-table
+fp-lib-table
+sym-lib-table
+*-cache.lib
+*-bak
+*.ses
+*.dsn
+*.rules
+tools/

@@ -1,0 +1,9 @@
+[submodule "kicad_lib_tmk"]
+	path = kicad_lib_tmk
+	url = https://github.com/tmk/kicad_lib_tmk.git
+[submodule "keyboard_parts.pretty"]
+	path = keyboard_parts.pretty
+	url = https://github.com/tmk/keyboard_parts.pretty.git
+[submodule "ProMicroKiCad"]
+	path = ProMicroKiCad
+	url = https://github.com/Biacco42/ProMicroKiCad.git

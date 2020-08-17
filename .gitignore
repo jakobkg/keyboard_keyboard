@@ -5,6 +5,8 @@ sym-lib-table
 *-cache.lib
 *-bak
 *.ses
+*.step
 *.dsn
 *.rules
 tools/
+gerber/

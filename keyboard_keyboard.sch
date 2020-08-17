@@ -323,10 +323,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 1800 6200 1800
 Wire Wire Line
-	4350 1500 4350 1400
-Wire Wire Line
 	4350 1500 4350 1700
-Connection ~ 4350 1500
 $Comp
 L Keyboard_symbols:KEYSW K2
 U 1 1 5EF3E0EF
@@ -340,13 +337,6 @@ F 3 "" H 4050 1500 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	5200 1500 5200 1700
-Wire Wire Line
-	5200 1500 5200 1400
-Connection ~ 5200 1500
-Wire Wire Line
-	5600 2100 5600 2000
-Wire Wire Line
-	6800 1500 6800 1400
 Connection ~ 6800 1500
 Wire Wire Line
 	7550 1500 7550 1400
@@ -723,43 +713,31 @@ Wire Wire Line
 	8900 3800 8100 3800
 Connection ~ 8100 3800
 $Comp
-L Keyboard_symbols:SW_PUSH SW2
+L Keyboard_symbols:SW_PUSH SW1
 U 1 1 5F061EB0
-P 5850 5250
-F 0 "SW2" H 5850 5505 50  0000 C CNN
-F 1 "SW_PUSH" H 5850 5414 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5850 5250 60  0001 C CNN
-F 3 "" H 5850 5250 60  0000 C CNN
-	1    5850 5250
+P 5900 5100
+F 0 "SW1" H 5900 5355 50  0000 C CNN
+F 1 "SW_PUSH" H 5900 5264 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5900 5100 60  0001 C CNN
+F 3 "" H 5900 5100 60  0000 C CNN
+	1    5900 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0105
 U 1 1 5F062B51
-P 5550 5250
-F 0 "#PWR0105" H 5550 5000 50  0001 C CNN
-F 1 "GND" H 5555 5077 50  0000 C CNN
-F 2 "" H 5550 5250 50  0001 C CNN
-F 3 "" H 5550 5250 50  0001 C CNN
-	1    5550 5250
+P 5600 5100
+F 0 "#PWR0105" H 5600 4850 50  0001 C CNN
+F 1 "GND" H 5605 4927 50  0000 C CNN
+F 2 "" H 5600 5100 50  0001 C CNN
+F 3 "" H 5600 5100 50  0001 C CNN
+	1    5600 5100
 	1    0    0    -1  
 $EndComp
-Text GLabel 6250 5250 2    50   Input ~ 0
+Text GLabel 6300 5100 2    50   Input ~ 0
 RESET
-$Comp
-L Device:R R1
-U 1 1 5F0631D3
-P 6150 5100
-F 0 "R1" H 6220 5146 50  0000 L CNN
-F 1 "10k" H 6220 5055 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6080 5100 50  0001 C CNN
-F 3 "~" H 6150 5100 50  0001 C CNN
-	1    6150 5100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6250 5250 6150 5250
-Connection ~ 6150 5250
+	6300 5100 6200 5100
 Text GLabel 3650 1750 0    50   Input ~ 0
 Row1
 Text GLabel 3200 2400 0    50   Input ~ 0
@@ -778,13 +756,9 @@ Wire Wire Line
 Connection ~ 3750 3200
 Text GLabel 3200 3800 0    50   Input ~ 0
 Row4
-Text GLabel 4350 1400 1    50   Input ~ 0
-Col1
-Text GLabel 5200 1400 1    50   Input ~ 0
-Col2
-Text GLabel 5600 2000 1    50   Input ~ 0
+Text GLabel 6400 800  1    50   Input ~ 0
 Col3
-Text GLabel 6800 1400 1    50   Input ~ 0
+Text GLabel 7150 800  1    50   Input ~ 0
 Col4
 Text GLabel 7550 1400 1    50   Input ~ 0
 Col5
@@ -804,19 +778,19 @@ Text GLabel 7550 2800 1    50   Input ~ 0
 Col5
 Text GLabel 8300 2800 1    50   Input ~ 0
 Col6
-Text GLabel 9050 2800 1    50   Input ~ 0
+Text GLabel 8700 3400 1    50   Input ~ 0
 Col7
-Text GLabel 9800 2800 1    50   Input ~ 0
+Text GLabel 9500 3400 1    50   Input ~ 0
 Col8
 $Comp
 L Device:R_POT RV2
 U 1 1 5F02F3EC
-P 4650 5100
-F 0 "RV2" H 4581 5146 50  0000 R CNN
-F 1 "R_POT" H 4581 5055 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Omeg_PC16BU_Vertical" H 4650 5100 50  0001 C CNN
-F 3 "~" H 4650 5100 50  0001 C CNN
-	1    4650 5100
+P 4650 4800
+F 0 "RV2" H 4581 4846 50  0000 R CNN
+F 1 "R_POT" H 4581 4755 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Omeg_PC16BU_Vertical" H 4650 4800 50  0001 C CNN
+F 3 "~" H 4650 4800 50  0001 C CNN
+	1    4650 4800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -844,23 +818,12 @@ $EndComp
 $Comp
 L power:VCC #PWR0107
 U 1 1 5F03A247
-P 4650 4950
-F 0 "#PWR0107" H 4650 4800 50  0001 C CNN
-F 1 "VCC" H 4665 5123 50  0000 C CNN
-F 2 "" H 4650 4950 50  0001 C CNN
-F 3 "" H 4650 4950 50  0001 C CNN
-	1    4650 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0110
-U 1 1 5F03B59A
-P 6150 4950
-F 0 "#PWR0110" H 6150 4800 50  0001 C CNN
-F 1 "VCC" H 6165 5123 50  0000 C CNN
-F 2 "" H 6150 4950 50  0001 C CNN
-F 3 "" H 6150 4950 50  0001 C CNN
-	1    6150 4950
+P 4650 4650
+F 0 "#PWR0107" H 4650 4500 50  0001 C CNN
+F 1 "VCC" H 4665 4823 50  0000 C CNN
+F 2 "" H 4650 4650 50  0001 C CNN
+F 3 "" H 4650 4650 50  0001 C CNN
+	1    4650 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -877,17 +840,17 @@ $EndComp
 $Comp
 L power:GND #PWR0112
 U 1 1 5F0401B0
-P 4650 5250
-F 0 "#PWR0112" H 4650 5000 50  0001 C CNN
-F 1 "GND" H 4655 5077 50  0000 C CNN
-F 2 "" H 4650 5250 50  0001 C CNN
-F 3 "" H 4650 5250 50  0001 C CNN
-	1    4650 5250
+P 4650 4950
+F 0 "#PWR0112" H 4650 4700 50  0001 C CNN
+F 1 "GND" H 4655 4777 50  0000 C CNN
+F 2 "" H 4650 4950 50  0001 C CNN
+F 3 "" H 4650 4950 50  0001 C CNN
+	1    4650 4950
 	1    0    0    -1  
 $EndComp
 Text GLabel 4100 5100 2    50   Input ~ 0
 Pot1
-Text GLabel 4800 5100 2    50   Input ~ 0
+Text GLabel 4800 4800 2    50   Input ~ 0
 Pot2
 Wire Notes Line
 	3600 4400 3600 5800
@@ -904,71 +867,49 @@ Wire Notes Line
 $Comp
 L Keyboard_symbols:KEYSW K26
 U 1 1 5F04C475
-P 8750 2900
-F 0 "K26" H 8750 3133 60  0000 C CNN
-F 1 "KEYSW" H 8750 2800 60  0001 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 8750 2900 60  0001 C CNN
-F 3 "" H 8750 2900 60  0000 C CNN
-	1    8750 2900
+P 4450 900
+F 0 "K26" H 4450 1133 60  0000 C CNN
+F 1 "KEYSW" H 4450 800 60  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 4450 900 60  0001 C CNN
+F 3 "" H 4450 900 60  0000 C CNN
+	1    4450 900 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D26
 U 1 1 5F04C47B
-P 8450 3050
-F 0 "D26" V 8496 2970 50  0000 R CNN
-F 1 "D" V 8405 2970 50  0000 R CNN
-F 2 "keyboard_parts:D_SOD123_axial" H 8450 3050 50  0001 C CNN
-F 3 "~" H 8450 3050 50  0001 C CNN
-	1    8450 3050
+P 4150 1050
+F 0 "D26" V 4196 970 50  0000 R CNN
+F 1 "D" V 4105 970 50  0000 R CNN
+F 2 "keyboard_parts:D_SOD123_axial" H 4150 1050 50  0001 C CNN
+F 3 "~" H 4150 1050 50  0001 C CNN
+	1    4150 1050
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8450 3200 7700 3200
-Connection ~ 7700 3200
-Wire Wire Line
-	9050 2800 9050 2900
-Wire Wire Line
-	9050 2900 9050 3100
-Wire Wire Line
-	9050 3100 8700 3100
-Wire Wire Line
-	8700 3100 8700 3500
-Connection ~ 9050 2900
+	4750 800  4750 900 
 $Comp
 L Keyboard_symbols:KEYSW K27
 U 1 1 5F056E49
-P 9500 2900
-F 0 "K27" H 9500 3133 60  0000 C CNN
-F 1 "KEYSW" H 9500 2800 60  0001 C CNN
-F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 9500 2900 60  0001 C CNN
-F 3 "" H 9500 2900 60  0000 C CNN
-	1    9500 2900
+P 5300 900
+F 0 "K27" H 5300 1133 60  0000 C CNN
+F 1 "KEYSW" H 5300 800 60  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 5300 900 60  0001 C CNN
+F 3 "" H 5300 900 60  0000 C CNN
+	1    5300 900 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D27
 U 1 1 5F056E4F
-P 9200 3050
-F 0 "D27" V 9246 2970 50  0000 R CNN
-F 1 "D" V 9155 2970 50  0000 R CNN
-F 2 "keyboard_parts:D_SOD123_axial" H 9200 3050 50  0001 C CNN
-F 3 "~" H 9200 3050 50  0001 C CNN
-	1    9200 3050
+P 5000 1050
+F 0 "D27" V 5046 970 50  0000 R CNN
+F 1 "D" V 4955 970 50  0000 R CNN
+F 2 "keyboard_parts:D_SOD123_axial" H 5000 1050 50  0001 C CNN
+F 3 "~" H 5000 1050 50  0001 C CNN
+	1    5000 1050
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9200 3200 8450 3200
-Connection ~ 8450 3200
-Wire Wire Line
-	9800 2800 9800 2900
-Wire Wire Line
-	9800 2900 9800 3100
-Wire Wire Line
-	9800 3100 9500 3100
-Wire Wire Line
-	9500 3100 9500 3500
-Connection ~ 9800 2900
 $Comp
 L promicro:ProMicro U1
 U 1 1 5F167E65
@@ -982,7 +923,6 @@ F 3 "" H 2200 4050 60  0000 C CNN
 $EndComp
 NoConn ~ 1400 4350
 NoConn ~ 1400 4450
-NoConn ~ 1400 4750
 NoConn ~ 2800 4350
 Wire Wire Line
 	1400 4550 1150 4550
@@ -993,16 +933,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0101
 U 1 1 5F175FDB
-P 1050 4600
-F 0 "#PWR0101" H 1050 4350 50  0001 C CNN
-F 1 "GND" H 1055 4427 50  0000 C CNN
-F 2 "" H 1050 4600 50  0001 C CNN
-F 3 "" H 1050 4600 50  0001 C CNN
-	1    1050 4600
+P 950 4600
+F 0 "#PWR0101" H 950 4350 50  0001 C CNN
+F 1 "GND" H 955 4427 50  0000 C CNN
+F 2 "" H 950 4600 50  0001 C CNN
+F 3 "" H 950 4600 50  0001 C CNN
+	1    950  4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1050 4600 1150 4600
 Connection ~ 1150 4600
 Wire Wire Line
 	1150 4600 1150 4650
@@ -1038,11 +976,11 @@ F 3 "" H 3300 4550 50  0001 C CNN
 $EndComp
 Text GLabel 2800 4550 2    50   Input ~ 0
 RESET
-Text GLabel 1400 4950 0    50   Input ~ 0
+Text GLabel 1400 4850 0    50   Input ~ 0
 Row1
-Text GLabel 1400 5050 0    50   Input ~ 0
+Text GLabel 1400 4950 0    50   Input ~ 0
 Row2
-Text GLabel 1400 5150 0    50   Input ~ 0
+Text GLabel 1400 5050 0    50   Input ~ 0
 Row3
 Text GLabel 1400 5250 0    50   Input ~ 0
 Row4
@@ -1062,7 +1000,6 @@ Text GLabel 2800 5350 2    50   Input ~ 0
 Col7
 Text GLabel 2800 5450 2    50   Input ~ 0
 Col8
-NoConn ~ 1400 4850
 Text GLabel 1400 5350 0    50   Input ~ 0
 Pot2
 Text GLabel 1400 5450 0    50   Input ~ 0
@@ -1126,4 +1063,154 @@ F 3 "~" H 1300 6900 50  0001 C CNN
 	1    1300 6900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	9500 3400 9500 3500
+Wire Wire Line
+	8700 3400 8700 3500
+Text GLabel 5600 800  1    50   Input ~ 0
+Col2
+Text GLabel 4750 800  1    50   Input ~ 0
+Col1
+Wire Wire Line
+	5000 1200 4150 1200
+Wire Wire Line
+	4750 900  4750 1100
+Wire Wire Line
+	4750 1100 4350 1100
+Wire Wire Line
+	4350 1100 4350 1500
+Connection ~ 4750 900 
+Connection ~ 4350 1500
+Wire Wire Line
+	5600 800  5600 900 
+Wire Wire Line
+	5600 900  5600 1100
+Connection ~ 5600 900 
+Text GLabel 3900 1150 0    50   Input ~ 0
+ModRow
+Wire Wire Line
+	3900 1150 4050 1150
+Wire Wire Line
+	4050 1150 4050 1200
+Wire Wire Line
+	4050 1200 4150 1200
+Connection ~ 4150 1200
+Text GLabel 1400 4750 0    50   Input ~ 0
+ModRow
+Text GLabel 1400 5150 0    50   Input ~ 0
+Pot3
+$Comp
+L Device:R_POT RV3
+U 1 1 5F3A49D3
+P 4450 5400
+F 0 "RV3" H 4381 5446 50  0000 R CNN
+F 1 "R_POT" H 4381 5355 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Omeg_PC16BU_Vertical" H 4450 5400 50  0001 C CNN
+F 3 "~" H 4450 5400 50  0001 C CNN
+	1    4450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F3A49D9
+P 4450 5250
+F 0 "#PWR?" H 4450 5100 50  0001 C CNN
+F 1 "VCC" H 4465 5423 50  0000 C CNN
+F 2 "" H 4450 5250 50  0001 C CNN
+F 3 "" H 4450 5250 50  0001 C CNN
+	1    4450 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F3A49DF
+P 4450 5550
+F 0 "#PWR?" H 4450 5300 50  0001 C CNN
+F 1 "GND" H 4455 5377 50  0000 C CNN
+F 2 "" H 4450 5550 50  0001 C CNN
+F 3 "" H 4450 5550 50  0001 C CNN
+	1    4450 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4600 5400 2    50   Input ~ 0
+Pot3
+Wire Wire Line
+	950  4600 1150 4600
+Wire Wire Line
+	5200 1100 5200 1500
+Wire Wire Line
+	5200 1100 5600 1100
+Connection ~ 5200 1500
+$Comp
+L Keyboard_symbols:KEYSW K28
+U 1 1 5F34B778
+P 6100 900
+F 0 "K28" H 6100 1133 60  0000 C CNN
+F 1 "KEYSW" H 6100 800 60  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 6100 900 60  0001 C CNN
+F 3 "" H 6100 900 60  0000 C CNN
+	1    6100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D28
+U 1 1 5F34B77E
+P 5800 1050
+F 0 "D28" V 5846 970 50  0000 R CNN
+F 1 "D" V 5755 970 50  0000 R CNN
+F 2 "keyboard_parts:D_SOD123_axial" H 5800 1050 50  0001 C CNN
+F 3 "~" H 5800 1050 50  0001 C CNN
+	1    5800 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5800 1200 5000 1200
+Connection ~ 5000 1200
+Wire Wire Line
+	6400 800  6400 900 
+Wire Wire Line
+	6400 900  6400 1100
+Wire Wire Line
+	6400 1100 6000 1100
+Wire Wire Line
+	6000 1100 6000 1700
+Wire Wire Line
+	6000 1700 5600 1700
+Wire Wire Line
+	5600 1700 5600 2100
+Connection ~ 6400 900 
+$Comp
+L Keyboard_symbols:KEYSW K29
+U 1 1 5F3648FE
+P 6850 900
+F 0 "K29" H 6850 1133 60  0000 C CNN
+F 1 "KEYSW" H 6850 800 60  0001 C CNN
+F 2 "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" H 6850 900 60  0001 C CNN
+F 3 "" H 6850 900 60  0000 C CNN
+	1    6850 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D29
+U 1 1 5F364904
+P 6550 1050
+F 0 "D29" V 6596 970 50  0000 R CNN
+F 1 "D" V 6505 970 50  0000 R CNN
+F 2 "keyboard_parts:D_SOD123_axial" H 6550 1050 50  0001 C CNN
+F 3 "~" H 6550 1050 50  0001 C CNN
+	1    6550 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 800  7150 900 
+Wire Wire Line
+	7150 900  7150 1100
+Wire Wire Line
+	7150 1100 6800 1100
+Wire Wire Line
+	6800 1100 6800 1500
+Connection ~ 7150 900 
+Wire Wire Line
+	6550 1200 5800 1200
+Connection ~ 5800 1200
 $EndSCHEMATC
